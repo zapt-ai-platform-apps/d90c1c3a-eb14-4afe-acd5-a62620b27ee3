@@ -1,17 +1,19 @@
-export async function saveGameProgress(phase, points) {
+export async function saveProgress(phase, points) {
   try {
+    console.log('Enviando progresso para o backend...');
     const response = await fetch('/api/saveProgress', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json'
+      },
       body: JSON.stringify({ phase, points })
     });
     if (!response.ok) {
-      const errorData = await response.json();
-      throw new Error(errorData.error || 'Falha ao salvar progresso');
+      throw new Error('Falha ao salvar progresso');
     }
     return await response.json();
   } catch (error) {
-    console.error('Erro na API de salvar progresso:', error);
+    console.error('Erro na API saveProgress:', error);
     throw error;
   }
 }

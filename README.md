@@ -1,26 +1,10 @@
-# Novo App - Jogo Clicker Mágico
+# Jogo Mágico
 
-Este aplicativo é um jogo clicker onde o usuário clica em um botão mágico para ganhar pontos, progredir por fases e conquistar prêmios. Além disso, o app possui suporte PWA, background music, monitoramento de erros com Sentry e analytics com Umami.
+Jogo Mágico é um jogo interativo onde o usuário toca em um botão "mágico" para ganhar pontos. Durante 100 segundos, cada clique vale 10 pontos; após esgotar o tempo, cada clique vale 9 pontos. Ao atingir 101 pontos, o jogador desbloqueia uma recompensa e avança para a próxima fase com dificuldade crescente. O progresso do jogo é salvo e há um prompt único para download do aplicativo, além de música de fundo para uma experiência imersiva.
 
-## Jornadas de Usuário
+## Jornadas do Usuário
 
-1. [Jogar Clicker](docs/journeys/jogar-clicker.md) - Jogue e avance pelas fases clicando no botão mágico.
-
-## Visão Geral
-
-- O usuário inicia o jogo com 100 segundos no timer.
-- Cada clique no botão mágico adiciona 10 pontos se o tempo estiver contando e 9 pontos se o tempo estiver zerado.
-- Ao atingir 101 pontos ou mais, um prêmio é exibido e o progresso (fase e pontos) é salvo na base de dados.
-- O jogo evolui através de fases (até 100) e, a cada conclusão de fase, o jogo reinicia os valores básicos.
-- Um banner de "Baixe o App" é exibido apenas uma vez e pode ser fechado pelo usuário.
-- O app inclui background music e um badge fixo "Made on ZAPT" que sempre permanece visível.
-- Erros e etapas estratégicas são logados no console e enviados ao Sentry para monitoramento.
-
-Este repositório também inclui documentação de apoio para auxiliar novos usuários a entenderem a jornada do jogo.
-
-## Integrações Externas
-
-- **Sentry:** Monitoramento de erros no frontend e backend.
-- **Progressier:** Suporte PWA através de service worker.
-- **Umami:** Coleta de analytics de uso.
-- **CockroachDB + Drizzle ORM:** Persistência do progresso do jogo.
+1. [Iniciar Jogo](docs/journeys/iniciar-jogo.md) - Comece a jogar e aprenda as regras básicas.
+2. [Jogar e Ganhar Pontos](docs/journeys/jogar-e-ganhar-pontos.md) - Toque no botão mágico para acumular pontos e monitorar o tempo.
+3. [Avançar de Fase](docs/journeys/avancar-fase.md) - Alcance 101 pontos para desbloquear recompensas e avançar para a próxima fase.
+4. [Baixar o Aplicativo](docs/journeys/baixar-o-aplicativo.md) - Receba o prompt para baixar o app e acesse recursos exclusivos.
